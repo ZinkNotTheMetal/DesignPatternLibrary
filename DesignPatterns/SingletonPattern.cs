@@ -10,23 +10,12 @@
     {
 
         // Private static object can access only inside the Emp class.  
-        private static SingletonPattern instance;
+        private static SingletonPattern _instance;
 
         // Private empty constructor to restrict end use to deny creating the object.  
         private SingletonPattern() {}
 
         // A public property to access outside of the class to create an object.  
-        public static SingletonPattern Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new SingletonPattern();
-                }
-                return instance;
-            }
-
-        }
+        public static SingletonPattern Instance => _instance ?? (_instance = new SingletonPattern());
     }
 }

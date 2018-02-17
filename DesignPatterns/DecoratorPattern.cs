@@ -29,7 +29,7 @@
 
     public abstract class Beverage
     {
-        protected string description = "Unknown Beverage";
+        protected string Description = "Unknown Beverage";
 
         public abstract double Cost();
 

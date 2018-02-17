@@ -24,7 +24,7 @@ public class AdapterPattern
 
         public static string TestCar(ICar car)
         {
-            return string.Format("Honk: {0}  &  Drive: {1}", car.Honk(), car.Drive());
+            return $"Honk: {car.Honk()}  &  Drive: {car.Drive()}";
         }
     }
 

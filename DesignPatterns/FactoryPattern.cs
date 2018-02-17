@@ -15,27 +15,27 @@ namespace DesignPatterns
     /// </summary>
     public class FactoryPattern
     {
-        interface Product
+        private interface IProduct
         {
 
         }
 
-        class ConcreteProductA : Product
+        class ConcreteProductA : IProduct
         {
         }
 
-        class ConcreteProductB : Product
+        class ConcreteProductB : IProduct
         {
         }
 
         abstract class Creator
         {
-            public abstract Product FactoryMethod(string type);
+            public abstract IProduct FactoryMethod(string type);
         }
 
         class ConcreteCreator : Creator
         {
-            public override Product FactoryMethod(string type)
+            public override IProduct FactoryMethod(string type)
             {
                 switch (type)
                 {
